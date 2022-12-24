@@ -131,6 +131,7 @@ h3 {
 
 p {
   line-height: 1.5;
+  text-align: justify;
 }
 
 a:any-link {
@@ -211,14 +212,17 @@ a:active {
 
 /* || FOOTER */
 
-footer {
+.footer {
   position: sticky;
   bottom: 0;
   background-color: var(--FOOTER-BGCOLOR);
   color: var(--NAV-COLOR);
   padding: var(--PADDING-TB) var(--PADDING-SIDE);
-  text-align: center;
+
   font-size: 80%;
+}
+.footer p {
+  text-align: center;
 }
 
 /* || MAIN */
@@ -246,6 +250,45 @@ footer {
 
 .about__trivia-answer {
   margin-top: 1em;
+}
+
+/* || STAFF */
+
+.staff__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.card {
+  width: min(100%, 350px);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card figure {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.card figcaption {
+  font-weight: bolder;
+  margin: 1rem;
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+  font-size: 0.8em;
 }
 
 /* || CONTACT */
@@ -304,7 +347,6 @@ dd {
   font-size: 0.75em;
   color: var(--CAPTION-COLOR);
   margin-bottom: 2rem;
-  text-align: justify;
 }
 
 .menu__wrapper {
@@ -400,5 +442,9 @@ dd {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .staff__wrapper {
+    flex-direction: column;
   }
 }
