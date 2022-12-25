@@ -341,6 +341,7 @@ dd {
 
 .menu__slogan {
   font-weight: bolder;
+  text-align: center;
 }
 
 .menu__description {
