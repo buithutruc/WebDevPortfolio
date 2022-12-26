@@ -218,7 +218,6 @@ a:active {
   background-color: var(--FOOTER-BGCOLOR);
   color: var(--NAV-COLOR);
   padding: var(--PADDING-TB) var(--PADDING-SIDE);
-
   font-size: 80%;
 }
 .footer p {
