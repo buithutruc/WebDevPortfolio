@@ -34,13 +34,6 @@ img {
   display: block;
 }
 
-.flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 /* ||  VARIABLES */
 
 :root {
@@ -48,6 +41,23 @@ img {
   --yellow: #f9d342;
   --light: #fff;
   --dark: #292826;
+}
+
+/* || UTILITY CLASSES */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* HEADER */
@@ -365,6 +375,22 @@ img {
   display: flex;
   justify-content: center;
   column-gap: 1rem;
+}
+
+/* || PERSONAL INFORMATION & PAYMENT */
+.contact__fieldset {
+  border: none;
+}
+
+.contact__label {
+  /* display: block; */
+  font-weight: bold;
+}
+
+.contact__input {
+  padding: 0.5em;
+  padding-right: 2em;
+  /* width: 100%; */
 }
 
 @media (min-width: 1370px) {
