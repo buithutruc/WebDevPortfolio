@@ -9,31 +9,34 @@
   </head>
   <body>
     <!-- header -->
-    <header class="header_bookingpage" id="header">
+    <header class="header_booking_page" id="header">
       <div class="head-bottom flex">
         <h2 class="">CHEZ MOI</h2>
       </div>
     </header>
-           <!-- end of header -->
+    <!-- end of header -->
     <main class="main">
       <section class="booking-width">
         <h1>Booking Summary</h1>
         <div id="container" class="booking-summary">
-          <div class="summary-item"><p>Check-in Date:</p> <span id="result-checkindate" class="result"> </span></div>
           <div class="summary-item">
-          Check-out Date: <span id="result-checkoutdate"> </span>
-        </div>
-        <div class="summary-item">
-          Total Stay: <span id="total-stay"> </span>
-        </div>
-        <div class="summary-item">
-          Price:
-          <span id="result-price"> </span>
-        </div>
-        <div class="summary-item">
-          Total:
-          <span id="total"> </span>
-        </div>
+            <p>Check-in Date:</p>
+            <span id="result-checkindate" class="result"> </span>
+          </div>
+          <div class="summary-item">
+            Check-out Date: <span id="result-checkoutdate"> </span>
+          </div>
+          <div class="summary-item">
+            Total Stay: <span id="total-stay"> </span>
+          </div>
+          <div class="summary-item">
+            Price:
+            <span id="result-price"> </span>
+          </div>
+          <div class="summary-item">
+            Total:
+            <span id="total"> </span>
+          </div>
         </div>
       </section>
 
@@ -45,188 +48,180 @@
           action="#form"
           onsubmit="return validateForm2();"
         >
-        
-            <h1>Personal Information</h1>
+          <h1>Personal Information</h1>
 
-            <fieldset>
-              <legend>Enter your Contact Information</legend>
+          <fieldset>
+            <legend>Enter your Contact Information</legend>
 
-              <table>
-                <tr>
-                  <td class="labelcell">First Name</td>
-                  <td class="inputcell2">
-                    <input class="text" name="fname" id="fname" size="25" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="labelcell">Last Name</td>
-                  <td class="inputcell2">
-                    <input class="text" name="lname" id="lname" size="25" />
-                  </td>
-                </tr>
+            <table>
+              <tr>
+                <td class="labelcell">First Name</td>
+                <td class="inputcell2">
+                  <input class="text" name="fname" id="fname" size="25" />
+                </td>
+              </tr>
+              <tr>
+                <td class="labelcell">Last Name</td>
+                <td class="inputcell2">
+                  <input class="text" name="lname" id="lname" size="25" />
+                </td>
+              </tr>
 
-                <tr>
-                  <td class="labelcell">Street</td>
-                  <td class="inputcell2">
-                    <textarea id="street" name="street"></textarea>
-                  </td>
-                </tr>
+              <tr>
+                <td class="labelcell">Street</td>
+                <td class="inputcell2">
+                  <textarea id="street" name="street"></textarea>
+                </td>
+              </tr>
 
-                <tr>
-                  <td class="labelcell">City</td>
-                  <td class="inputcell2">
-                    <input class="text" name="city" id="city" size="25" />
-                    <span class="fieldlabel">State</span>
-                    <select name="state">
-                      <option>AL</option>
-                      <option>AK</option>
-                      <option>AZ</option>
-                      <option>AR</option>
-                      <option>CA</option>
-                      <option>CO</option>
-                      <option>CT</option>
-                      <option>DE</option>
-                      <option>DC</option>
-                      <option>FL</option>
-                      <option>GA</option>
-                      <option>HI</option>
-                      <option>ID</option>
-                      <option>IL</option>
-                      <option>IN</option>
-                      <option>IA</option>
-                      <option>KS</option>
-                      <option>KY</option>
-                      <option>LA</option>
-                      <option>ME</option>
-                      <option>MD</option>
-                      <option>MA</option>
-                      <option>MI</option>
-                      <option>MN</option>
-                      <option>MS</option>
-                      <option>MO</option>
-                      <option>MT</option>
-                      <option>NE</option>
-                      <option>NV</option>
-                      <option>NH</option>
-                      <option>NJ</option>
-                      <option>NM</option>
-                      <option>NY</option>
-                      <option>NC</option>
-                      <option>ND</option>
-                      <option>OH</option>
-                      <option>OK</option>
-                      <option>OR</option>
-                      <option>PA</option>
-                      <option>RI</option>
-                      <option>SC</option>
-                      <option>SD</option>
-                      <option>TN</option>
-                      <option>TX</option>
-                      <option>UT</option>
-                      <option>VT</option>
-                      <option>VA</option>
-                      <option>WA</option>
-                      <option>WV</option>
-                      <option>WI</option>
-                      <option>WY</option>
-                    </select>
-                    <span class="fieldlabel">ZIP</span>
-                    <input class="text" id="zip" name="zip" size="10" />
-                  </td>
-                </tr>
-              </table>
-            </fieldset>
+              <tr>
+                <td class="labelcell">City</td>
+                <td class="inputcell2">
+                  <input class="text" name="city" id="city" size="25" />
+                  <span class="fieldlabel">State</span>
+                  <select name="state">
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AZ</option>
+                    <option>AR</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>DC</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>IA</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>ME</option>
+                    <option>MD</option>
+                    <option>MA</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MO</option>
+                    <option>MT</option>
+                    <option>NE</option>
+                    <option>NV</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WV</option>
+                    <option>WI</option>
+                    <option>WY</option>
+                  </select>
+                  <span class="fieldlabel">ZIP</span>
+                  <input class="text" id="zip" name="zip" size="10" />
+                </td>
+              </tr>
+            </table>
+          </fieldset>
 
-            <p id="formbuttons">
-              <input
-                type="button"
-                name="prevb"
-                id="prevb"
-                value="Previous"
-                onclick="history.back()"
-              />
-              <input type="submit" name="nextb" id="nextb" value="Next" />
-            </p>
+          <h1>Payment Form</h1>
+
+          <fieldset>
+            <legend>Enter your Credit Card Information</legend>
+
+            <table>
+              <tr>
+                <td class="labelcell">Card</td>
+                <td class="inputcell2">
+                  <input type="radio" name="ccard" id="amex" />
+                  <label for="amex">American Express</label><br />
+                  <input type="radio" name="ccard" id="diners" />
+                  <label for="diners">Diners Club</label><br />
+                  <input type="radio" name="ccard" id="disc" />
+                  <label for="disc">Discover</label><br />
+                  <input type="radio" name="ccard" id="mc" />
+                  <label for="mc">MasterCard</label><br />
+                  <input type="radio" name="ccard" id="visa" />
+                  <label for="visa">Visa</label>
+                </td>
+              </tr>
+              <tr>
+                <td class="labelcell">Name</td>
+                <td class="inputcell2">
+                  <input class="text" name="cname" id="cname" size="35" />
+                </td>
+              </tr>
+              <tr>
+                <td class="labelcell">Number</td>
+                <td class="inputcell2">
+                  <input class="text" name="cnumber" id="cnumber" size="35" />
+                  <span class="fieldlabel">Expiration</span>
+                  <select name="cmonth" id="cmonth">
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                  </select>
+                  /
+                  <select name="cyear" id="cyear">
+                    <option>2006</option>
+                    <option>2007</option>
+                    <option>2008</option>
+                    <option>2009</option>
+                    <option>2010</option>
+                    <option>2011</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+
+          <div id="formbuttons">
+            <input
+              class="btn"
+              type="button"
+              name="prevb"
+              id="prevb"
+              value="Back"
+              onclick="history.back()"
+            />
+            <input
+              class="btn"
+              type="submit"
+              name="nextb"
+              id="nextb"
+              value="Submit"
+            />
           </div>
         </form>
-
-        <form name="form3" id="form3" method="post" action="done.html"
-          onsubmit="return checkForm3()">
-
-        <div id="main">
-            <h1>Payment Form</h1>
-
-            <fieldset>
-                <legend>Enter your Credit Card Information</legend>
-
-                <table>
-                    <tr>
-                        <td class="labelcell">Card</td>
-                        <td class="inputcell2">
-                            <input type="radio" name="ccard" id="amex" />
-                            <label for="amex">American Express</label><br />
-                            <input type="radio" name="ccard" id="diners" />
-                            <label for="diners">Diners Club</label><br />
-                            <input type="radio" name="ccard" id="disc" />
-                            <label for="disc">Discover</label><br />
-                            <input type="radio" name="ccard" id="mc" />
-                            <label for="mc">MasterCard</label><br />
-                            <input type="radio" name="ccard" id="visa" />
-                            <label for="visa">Visa</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="labelcell">Name</td>
-                        <td class="inputcell2">
-                            <input class="text" name="cname" id="cname" size="35" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="labelcell">Number</td>
-                        <td class="inputcell2">
-                            <input class="text" name="cnumber" id="cnumber" size="35" />
-                            <span class="fieldlabel">Expiration</span>
-                            <select name="cmonth" id="cmonth">
-                                <option>01</option>
-                                <option>02</option>
-                                <option>03</option>
-                                <option>04</option>
-                                <option>05</option>
-                                <option>06</option>
-                                <option>07</option>
-                                <option>08</option>
-                                <option>09</option>
-                                <option>10</option>
-                                <option>11</option>
-                                <option>12</option>
-                            </select>
-                            /
-                            <select name="cyear" id="cyear">
-                                <option>2006</option>
-                                <option>2007</option>
-                                <option>2008</option>
-                                <option>2009</option>
-                                <option>2010</option>
-                                <option>2011</option>
-                            </select>
-                        </td>
-                    </tr>
-                </table>
-            </fieldset>
-
-            <p id="formbuttons">
-                <input type="button" name="prevb" id="prevb" value="Previous" onclick="history.back()" />
-                <input type="submit" name="nextb" id="nextb" value="Next" />
-            </p>
-        </div>
-
-    </form>
       </section>
     </main>
     <!-- footer -->
     <footer class="footer">
       <div class="footer-container">
-        
         <div>
           <h2>Have A Question</h2>
           <div class="contact-item">
