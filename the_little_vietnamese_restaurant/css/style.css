@@ -252,7 +252,6 @@ a:active {
 }
 
 /* || STAFF */
-
 .staff__wrapper {
   display: flex;
   flex-direction: row;
@@ -407,7 +406,6 @@ dd {
 }
 
 /* || GALLERY */
-
 .gallery__container {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 400px));
