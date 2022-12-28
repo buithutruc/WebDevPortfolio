@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chez Moi Hotel</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script
+      src="https://kit.fontawesome.com/dbed6b6114.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header" id="header">
+      <div class="head-top section-width">
+        <div class="site-name">
+          <span>CHEZ MOI</span>
+        </div>
+        <div class="site-nav">
+          <span id="nav-btn">MENU <i class="fas fa-bars"></i></span>
+        </div>
+      </div>
+
+      <div class="head-bottom flex">
+        <h2>NICE AND COMFORTABLE PLACE TO STAY</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto est
+          quos veniam impedit numquam itaque voluptatum, dicta asperiores
+          accusamus, eligendi neque ut incidunt, modi harum molestiae atque
+          natus officia minima.
+        </p>
+        <button
+          type="button"
+          class="head-btn"
+          onclick="window.location.href='cm_index.html#rooms';"
+        >
+          GET STARTED
+        </button>
+      </div>
+    </header>
+    <!-- end of header -->
+
+    <!-- side navbar -->
+    <div class="sidenav" id="sidenav">
+      <span class="cancel-btn" id="cancel-btn">
+        <i class="fas fa-times"></i>
+      </span>
+
+      <ul class="navbar">
+        <li><a href="#header">home</a></li>
+        <li><a href="#rooms">rooms</a></li>
+        <li><a href="booking.html">booking</a></li>
+      </ul>
+      <button class="btn sign-up">sign up</button>
+      <button class="btn log-in">log in</button>
+    </div>
+    <!-- end of side navbar -->
+
+    <!-- fullscreen modal -->
+    <div id="modal"></div>
+    <!-- end of fullscreen modal -->
+
+    <!-- body content  -->
+    <section class="rooms section-width" id="rooms">
+      <div class="title">
+        <h2>rooms</h2>
+      </div>
+      <div class="rooms-container">
+        <!-- room 1 -->
+        <article class="room">
+          <div class="room-image">
+            <img src="images/room1.jpg" alt="room image" />
+          </div>
+          <div class="room-text">
+            <h3>Luxury Rooms</h3>
+            <ul>
+              <li>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                Lorem ipsum dolor sit amet.
+              </li>
+              <li>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                Lorem ipsum dolor sit amet.
+              </li>
+              <li>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                Lorem ipsum dolor sit amet.
+              </li>
+            </ul>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus exercitationem repellendus maxime ullam tempore
+              architecto provident unde expedita quam beatae, dolore eligendi
+              molestias sint tenetur incidunt voluptas. Unde corporis qui iusto
+              vitae. Aut nesciunt id iste, cum esse commodi nemo?
+            </p>
+
+            <!-- start booking class -->
+            <div class="booking">
+              <form action="booking.html" method="GET">
+                <p class="rate">
+                  $<span id="price" name="price">99.99</span>/ Per Night
+                </p>
+                <div class="date-form">
+                  <div class="check-in">
+                    <label for="checkin-date">Check In Date: </label>
+                    <input
+                      class="date-form-input"
+                      type="date"
+                      name="checkin-date"
+                      id="checkin-date"
+                    />
+                  </div>
+
+                  <div class="check-out">
+                    <label for="checkout-date">Check Out Date: </label>
+                    <input
+                      class="date-form-input"
+                      type="date"
+                      name="checkout-date"
+                      id="checkout-date"
+                    />
+                  </div>
+                </div>
+
+                <input
+                  class="btn"
+                  type="submit"
+                  value="Submit"
+                  onclick="handleSubmit();"
+                />
+              </form>
+            </div>
+            <!-- end booking class -->
+          </div>
+          <!-- end book text -->
+        </article>
+        <!-- end of room 1 -->
+
+        <!-- room 2 -->
+        <article class="room">
+          <div class="room-image">
+            <img src="images/room2.jpg" alt="room image" />
+          </div>
+          <div class="room-text">
+            <h3>Luxury Rooms</h3>
+            <ul>
+              <li>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                Lorem ipsum dolor sit amet.
+              </li>
+              <li>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                Lorem ipsum dolor sit amet.
+              </li>
+              <li>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                Lorem ipsum dolor sit amet.
+              </li>
+            </ul>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus exercitationem repellendus maxime ullam tempore
+              architecto provident unde expedita quam beatae, dolore eligendi
+              molestias sint tenetur incidunt voluptas. Unde corporis qui iusto
+              vitae. Aut nesciunt id iste, cum esse commodi nemo?
+            </p>
+
+            <!-- start booking class -->
+            <div class="booking">
+              <form action="booking.html" method="GET">
+                <p class="rate">
+                  $<span id="price" name="price">99.99</span>/ Per Night
+                </p>
+                <div class="date-form">
+                  <div class="check-in">
+                    <label for="checkin-date">Check In Date: </label>
+                    <input
+                      class="date-form-input"
+                      type="date"
+                      name="checkin-date"
+                      id="checkin-date"
+                    />
+                  </div>
+
+                  <div class="check-out">
+                    <label for="checkout-date">Check Out Date: </label>
+                    <input
+                      class="date-form-input"
+                      type="date"
+                      name="checkout-date"
+                      id="checkout-date"
+                    />
+                  </div>
+                </div>
+
+                <input
+                  class="btn"
+                  type="submit"
+                  value="Submit"
+                  onclick="handleSubmit();"
+                />
+              </form>
+            </div>
+            <!-- end booking class -->
+          </div>
+        </article>
+        <!-- end of room 2 -->
+        <!-- room 3 -->
+        <article class="room">
+          <div class="room-image">
+            <img src="images/room3.jpg" alt="room image" />
+          </div>
+          <div class="room-text">
+            <h3>Luxury Rooms</h3>
+            <ul>
+              <li>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                Lorem ipsum dolor sit amet.
+              </li>
+              <li>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                Lorem ipsum dolor sit amet.
+              </li>
+              <li>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                Lorem ipsum dolor sit amet.
+              </li>
+            </ul>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus exercitationem repellendus maxime ullam tempore
+              architecto provident unde expedita quam beatae, dolore eligendi
+              molestias sint tenetur incidunt voluptas. Unde corporis qui iusto
+              vitae. Aut nesciunt id iste, cum esse commodi nemo?
+            </p>
+
+            <!-- start booking class -->
+            <div class="booking">
+              <p class="rate">
+                $<span id="price" name="price">99.99</span>/ Per Night
+              </p>
+              <form action="booking.html" method="GET">
+                <div class="date-form">
+                  <div class="check-in">
+                    <label for="checkin-date">Check In Date: </label>
+                    <input
+                      class="date-form-input"
+                      type="date"
+                      name="checkin-date"
+                      id="checkin-date"
+                    />
+                  </div>
+
+                  <div class="check-out">
+                    <label for="checkout-date">Check Out Date: </label>
+                    <input
+                      class="date-form-input"
+                      type="date"
+                      name="checkout-date"
+                      id="checkout-date"
+                    />
+                  </div>
+                </div>
+
+                <input
+                  class="btn"
+                  type="submit"
+                  value="Submit"
+                  onclick="handleSubmit();"
+                />
+              </form>
+            </div>
+            <!-- end booking class -->
+          </div>
+        </article>
+        <!-- end of room 3-->
+      </div>
+    </section>
+
+    <!-- end of body content -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div>
+          <h2>About Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            sapiente mollitia doloribus provident? Eos quisquam aliquid vel
+            dolorum, impedit culpa.
+          </p>
+          <ul class="social-icons">
+            <li class="flex">
+              <i class="fa fa-twitter fa-2x"></i>
+            </li>
+            <li class="flex">
+              <i class="fa fa-facebook fa-2x"></i>
+            </li>
+            <li class="flex">
+              <i class="fa fa-instagram fa-2x"></i>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Useful Links</h2>
+          <a href="#">Blog</a>
+          <a href="#">Rooms</a>
+          <a href="#">Subscription</a>
+          <a href="#">Gift Card</a>
+        </div>
+
+        <div>
+          <h2>Privacy</h2>
+          <a href="#">Career</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Services</a>
+        </div>
+
+        <div>
+          <h2>Have A Question</h2>
+          <div class="contact-item">
+            <span>
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <span>
+              203 Fake St.Mountain View, San Francisco, California, USA
+            </span>
+          </div>
+          <div class="contact-item">
+            <span>
+              <i class="fas fa-phone-alt"></i>
+            </span>
+            <span> +84545 37534 48 </span>
+          </div>
+          <div class="contact-item">
+            <span>
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span> info@domain.com </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end of footer -->
+
+    <script src="scripts/show_menu.js"></script>
+    <script src="scripts/submit.js"></script>
+    <script src="scripts/booking.js"></script>
+  </body>
+</html>
