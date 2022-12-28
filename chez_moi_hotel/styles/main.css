@@ -314,8 +314,6 @@ img {
   background: var(--dark);
   color: #fff;
   text-align: center;
-  position: sticky;
-  bottom: 0;
 }
 .footer-container {
   width: 85vw;
