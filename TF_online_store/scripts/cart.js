@@ -1,3 +1,19 @@
+/* Function list
+1. ready() - load the ready state of the store
+2. addCartClicked(event) - add the item to cart when the cart button of that item is clicked
+3. addProductToCart(title, price, productImg) - get the item details when that item is added to cart
+4. removeCartItem(event) - remove an item from cart
+5. quantityChanged(event) - make sure the quantity number is always positive and the total amount is updated when the quantity is changed
+6. buyButtonClicked() - show an alert when the buy button is clicked
+7. updateItemsTotal() - update the total cost of the items (not including shipping fee and tax)
+8. calculateShipping(shipOption) - calculates the shipping value
+9. calculateTotal - calculates the total of placed order
+*/
+
+let priceValue;
+let shipValue;
+let shipIncValue;
+
 //prepare the state
 if (document.readyState == "loading") {
   document.addEventListener("DOMContentLoaded", ready);
@@ -5,6 +21,9 @@ if (document.readyState == "loading") {
   ready();
 }
 
+/**
+ * load the ready state of the store
+ */
 function ready() {
   //add to cart
   var addCart = document.getElementsByClassName("add-cart");
@@ -34,7 +53,10 @@ function ready() {
     .addEventListener("click", buyButtonClicked);
 }
 
-//ADD TO CART
+/**
+ * add the item to cart when the cart button of that item is clicked
+ * @param {*} event
+ */
 function addCartClicked(event) {
   var button = event.target;
   var shopProducts = button.parentElement;
@@ -45,6 +67,13 @@ function addCartClicked(event) {
   updateItemsTotal();
 }
 
+/**
+ * get the item details when that item is added to cart
+ * @param {*} title
+ * @param {*} price
+ * @param {*} productImg
+ * @returns
+ */
 function addProductToCart(title, price, productImg) {
   var cartShopBox = document.createElement("div");
   cartShopBox.classList.add("cart-box");
@@ -76,14 +105,21 @@ function addProductToCart(title, price, productImg) {
     .addEventListener("change", quantityChanged);
 }
 
-//REMOVE ITEMS
+/**
+ * remove an item from cart
+ * @param {*} event
+ */
 function removeCartItem(event) {
   var buttonClicked = event.target;
   buttonClicked.parentElement.remove();
   updateItemsTotal();
 }
 
-//CHANGE QUANTITY
+/**
+ * make sure the quantity number is always positive
+ * and the total amount is updated when the quantity is changed
+ * @param {*} event
+ */
 function quantityChanged(event) {
   var input = event.target;
   if (isNaN(input.value) || input.value <= 0) {
@@ -92,7 +128,9 @@ function quantityChanged(event) {
   updateItemsTotal();
 }
 
-//CLICK THE BUY BUTTON
+/**
+ * show an alert when the buy button is clicked
+ */
 function buyButtonClicked() {
   alert("Your order is placed!");
   // var cartContent = document.getElementsByClassName("cart-content")[0];
@@ -102,7 +140,9 @@ function buyButtonClicked() {
   // updateItemsTotal();
 }
 
-//UPDATE ITEMS TOTAL
+/**
+ * update the total cost of the items (not including shipping fee and tax)
+ */
 function updateItemsTotal() {
   var cartContent = document.getElementsByClassName("cart-content")[0];
   var cartBoxes = cartContent.getElementsByClassName("cart-box");
@@ -119,3 +159,45 @@ function updateItemsTotal() {
   document.getElementsByClassName("summary-price")[0].innerText =
     "$" + total.toFixed(2);
 }
+
+/**
+ * calculates the shipping value
+ * @param {Number} shipOption
+ */
+function calculateShipping(shipOption) {
+  document.getElementById("txtShipMethod").value = shipOption.value;
+  calculateTotal();
+}
+
+/**
+ * calculates the total of placed order
+ */
+function calculateTotal() {
+  priceValue = window.parseFloat(document.getElementById("txtPrice").value);
+  shipValue = parseFloat(document.getElementById("txtShipMethod").value);
+  shipIncValue = (priceValue + shipValue).toFixed(2);
+
+  // display the subtotal of the order in the textfield txtSubtotal, including items total + shipping
+  console.log((priceValue + shipValue).toFixed(2));
+  document.getElementById("txtSubtotal").value = shipIncValue;
+  document.getElementById("txtSubtotal").innerText = "$" + shipIncValue;
+
+  // declare the tax rate
+  const TAX_RATE = 0.05;
+
+  let taxValue = (priceValue + shipValue) * TAX_RATE;
+
+  // display the tax value in the textfield txtTax
+  document.getElementById("txtTax").value = taxValue.toFixed(2);
+  document.getElementById("txtTax").innerText = taxValue.toFixed(2);
+
+  // display the grand total value of the order in the txtfield txtTotal
+  document.getElementById("txtTotal").value = (
+    priceValue +
+    shipValue +
+    taxValue
+  ).toFixed(2);
+
+  document.getElementById("txtTotal").innerText =
+    "$" + (priceValue + shipValue + taxValue).toFixed(2);
+} // end function calculateTotal
