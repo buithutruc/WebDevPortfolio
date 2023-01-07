@@ -11,25 +11,19 @@ function receiveResult() {
     const checkin = params.get("checkin-date");
     const checkout = params.get("checkout-date");
 
-    // const price = params.get("price");
-    const price = sessionStorage.getItem("Price");
-    console.log(price);
-    //   debugger;
-
-    let total;
-
     // Via local Storage
+    const price = localStorage.getItem("Price");
+    console.log(price);
+
     document.getElementById("result-checkindate").innerHTML = checkin;
     document.getElementById("result-checkoutdate").innerHTML = checkout;
     calculateDates();
 
     document.getElementById("result-price").innerText = "$" + price;
-    total =
+    let total =
       parseFloat(price) *
       parseFloat(document.getElementById("total-stay").innerText);
     document.getElementById("total").innerText = "$" + total.toFixed(2);
-
-    //   debugger;
   });
 }
 /**
