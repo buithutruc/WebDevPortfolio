@@ -101,8 +101,6 @@ html {
   scroll-behavior: smooth;
   font-size: var(--FS);
   font-family: var(--FF);
-  background-color: var(--BGCOLOR);
-  background-image: var(--BGIMAGE);
 }
 
 body {
